@@ -1,0 +1,487 @@
+@import "base/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $color-base;
+
+    .menu{
+        background: linear-gradient(rgb(187, 36, 36) , rgb(209, 41, 22), rgb(232, 81, 0), rgb(255, 102, 0), rgb(187, 36, 36));
+        box-shadow: 2px; 
+
+        .menu{
+            padding: 0%;
+        }
+    }
+}
+
+#bienvenidos{
+    text-align: center;
+
+    h2{
+        padding: 30px;
+        font-size:28px;
+
+        p{
+            padding: 10px;
+    margin:10%;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    }
+}
+
+
+/*BANNER*/
+
+#banner{
+    margin-top: 50px;
+    position: relative; /*para que el contenedor se posicione en base a su ancestro mas cercano*/
+}
+
+#banner img{
+    width: 100%;
+    height: 500px;
+}
+
+#banner .contenedor{
+    position: absolute;
+    display: flexbox;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $color-base;
+}
+
+#banner h2{
+    font-size: 28px;
+}
+
+#banner a{
+    display: block;
+    width: 100px;
+    color: $color-base;
+    text-decoration: none;
+    margin-top: 10px;
+    border: 3px solid $color-base;
+}
+
+#banner a:hover{
+    background-color: rgba(133, 0, 0, 0.505);
+}
+
+#temp{
+    padding: 30px;
+}
+
+#temp h3, h4{
+    text-align: center;
+    font-size: bold;
+}
+
+#temp .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#temp article{
+    margin: 15px;
+}
+
+#temp img{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 280px;
+    padding: 5px;
+}
+
+.carru{
+    padding: 90px;
+
+    p{
+        font-size: 2rem;
+        text-align: center; 
+    }
+}
+
+footer{
+    margin: 20px;
+    padding: 20px;
+    
+
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 25px;
+
+        .foo{
+            font-size: 20px;
+            padding: 15px;
+            }
+
+            .sociales{
+                width: 100%;
+                text-align: center;
+                font-size: 28px;
+
+                a{
+                    color:black;
+                }
+            }
+        }
+    }
+
+
+/*--------------JUEGOSSSSSSSSSSSS--------------*/
+
+.videojuegos{
+    margin: top;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    grid-template-rows: auto auto auto auto  ;
+    grid-template-areas:
+                        "h2 h2 h2 h2"
+                        "p-jue p-jue p-jue p-jue"
+                        "mg-jueg mg-jueg mg-jueg mg-jueg"
+                        "img-jueg img-jueg img-jueg img-jueg"
+                        "p-jue2 p-jue2 p-jue2 p-jue2";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;   
+}
+
+.jue{
+    grid-area: h2;
+    padding: 20px;
+}
+
+.p-jue{
+    grid-area: p-jue;
+    line-height: 30px;
+    margin: 10px;
+}
+
+.img-jueg{
+    grid-area: img-jueg;
+
+}
+
+.p-jue2{
+    grid-area: p-jue2;
+    padding: 50px;
+    line-height: 30px;
+}
+
+
+
+
+
+/*registro*/
+
+#reg{
+    display: flex;
+    justify-content: center;
+    background-color:$color-base;
+    margin-top: auto;
+    width: 100vw;
+    height: 90vh;
+    
+
+    .cardRegistro{
+        justify-content: center;
+        margin-top: 2%;
+        background: linear-gradient(rgb(187, 36, 36) , rgb(209, 41, 22), rgb(232, 81, 0), rgb(255, 102, 0), rgb(187, 36, 36));;
+
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+
+        .boxRegistro{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+
+            #botonReg {
+                font-family: Arial, Helvetica, sans-serif;
+                border: 0px;
+                color: rgb(0, 0, 0);
+                display:inline-block;
+                padding: 20px;
+                text-decoration: none;
+                background-color: #568059;
+                border-top:#40683d;
+                border-top-style: solid;
+                border-bottom: #596851;
+                border-bottom-style: solid;
+                font-weight: bold;
+                font-size: 100%;}
+
+                #botonReg:hover {
+                    transition: 500ms;
+                    background-color: #e0b983;
+                    border-top:#e87a05;
+                    border-top-style: solid;
+                    border-bottom: #efb429;
+                    border-bottom-style: solid;
+                    transform: scale(1.1);
+                    color: $color-base;
+                }
+            }
+
+            .labelRegistro {
+                width: 80%;
+                border: 4px solid #7a4242;
+                border-radius: 15px;
+                height: 8vh;}
+
+                .checkbox {
+                    margin: 5px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 30px;
+
+                }
+            }
+        }
+    
+
+/*-----------GALERIA-------------------*/
+
+.main-dos{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+
+    grid-template-areas:
+                        "main-dos main-dos main-dos main-dos"
+                        "main-p main-p main-p main-p"
+                        "imagen-uno imagen-dos imagen-tres imagen-cuatro"
+                        "imagen-cinco imagen-seis imagen-siete imagen-ocho"
+                        "imagen-nueve imagen-diez imagen-once imagen-doce"
+                        "imagen-trece imagen-catorce imagen-quince imagen-dieciseis"                    
+                        "parrafo parrafo parrafo parrafo"
+                        "footer footer footer footer";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;   
+}
+
+.foo-gal{
+    grid-area: footer;
+}
+
+
+.main-p{
+    margin-top: 0%;
+    grid-area: main-p;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.imagen-uno{
+    grid-area: imagen-uno;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-dos{
+    grid-area: imagen-dos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-tres{
+    grid-area: imagen-tres;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-cuatro{
+    grid-area: imagen-cuatro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-cinco{
+    grid-area: imagen-cinco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagen-seis{
+    grid-area: imagen-seis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-siete{
+    grid-area: imagen-siete;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-ocho{
+    grid-area: imagen-ocho;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-nueve{
+    grid-area: imagen-nueve;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-diez{
+    grid-area: imagen-diez;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-once{
+    grid-area: imagen-once;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-doce{
+    grid-area: imagen-doce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-trece{
+    grid-area: imagen-trece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagen-catorce{
+    grid-area: imagen-catorce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagen-quince{
+    grid-area: imagen-quince;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagen-dieciseis{
+    grid-area: imagen-dieciseis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.parrafo{
+    grid-area: parrafo;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(133, 0, 0);
+    color: white;
+    padding: 5px;
+}
+
+figcaption{
+    text-align: center;
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+.girar{
+    animation-name: girar;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
